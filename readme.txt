@@ -20,6 +20,7 @@ Notice how the "language-dependent" class is used.
 
 Selecting language in the header menu changes the lang attribute.
 
+...
 
 **************
 Files included
