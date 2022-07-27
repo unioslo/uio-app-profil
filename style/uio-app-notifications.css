@@ -1,0 +1,57 @@
+/*******************************************************************************
+UiO App
+App-notification styles
+*******************************************************************************/
+
+.app-notification {
+  background: #3E31D6;
+  padding: 10px 0;
+}
+
+.app-notification * {
+  color: #fff;
+}
+
+.app-notification p {
+  margin: 5px 0;
+}
+
+.app-notification .notification-content {
+  display: flex;
+}
+
+.app-notification .close-button {
+  flex-shrink: 0;
+  background: url("../images/x-small-light.svg") no-repeat center;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.app-notification .close-button:hover {
+  opacity: .7;
+}
+
+/* info-notification variant */
+
+.app-info-notification .notification-content {
+  padding: 20px 0;
+}
+
+.app-info-notification .notification-content::before {
+  content: "";
+  flex-shrink: 0;
+  background: url("../images/i.svg") no-repeat center;
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+}
+
+/* privacy-notification variant */
+
+#app-privacy-notification {
+  background: #18191C;
+}

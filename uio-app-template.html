@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UiO app</title>
+
+  <!-- styles (can be bundled as needed) -->
+
+  <link href="./style/uio-app-global.css" rel="stylesheet" />
+  <link href="./style/uio-app-header.css" rel="stylesheet" />
+  <link href="./style/uio-app-footer.css" rel="stylesheet" />
+  <link href="./style/uio-app-main.css" rel="stylesheet" />
+  <link href="./style/uio-app-notifications.css" rel="stylesheet" />
+</head>
+
+<body id="uio-app">
+
+  <!-- header -->
+
+  <header id="app-header">
+    <a href="#app-main" class="skip-link">
+      <span class="language-dependent lang-nb">Hopp til hovedinnhold</span>
+      <span class="language-dependent lang-en">Skip to main content</span>
+    </a>
+    <div id="header-uio-identity">
+      <div class="app-global-wrapper">
+        <a id="header-uio-logo" href="http://www.uio.no/">
+          <span class="invisible">uio.no</span>
+        </a>
+      </div>
+    </div>
+    <div id="app-header-core">
+      <div class="app-global-wrapper">
+
+        <!-- app name -->
+
+        <div id="header-appname">
+          <a href="/">Applikasjonsnavn</a>
+        </div>
+        <button id="responsive-menu-button" aria-controls="header-menu" aria-expanded="false">
+          <span class="invisible">Meny</span>
+        </button>
+        <div id="header-menu">
+
+          <!-- language-menu -->
+
+          <div id="language-menu" class="menu-container">
+            <button id="language-menu-button" class="expand-button" aria-controls="language-menu-content" aria-expanded="false">
+              <span class="button-text">Language</span>
+            </button>
+            <ul id="language-menu-content" class="collapsable-menu">
+              <li><button class="nb">Norsk</button></li>
+              <li><button class="en">English</button></li>
+            </ul>
+          </div>
+
+          <!-- user-menu -->
+          
+          <div id="user-menu" class="menu-container">
+            <button id="user-menu-button" class="expand-button" aria-controls="user-menu-content" aria-expanded="false">
+              <span class="button-text">Fornavn Etternavn</span>
+            </button>
+            <ul id="user-menu-content" class="collapsable-menu">
+              <li>
+                <button class="log-out">
+                  <span class="language-dependent lang-nb">Logg ut</span>
+                  <span class="language-dependent lang-en">Log out</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- notifications -->
+
+    <!-- privacy notification (uncomment and use as needed) -->
+
+    <!--
+    <div id="app-privacy-notification" class="app-notification">
+      <div class="app-global-wrapper">
+        <div class="notification-content">
+          <p><a href="#">Les om hvordan UiO behandler personopplysninger, om dine personvernrettigheter ved UiO og om hvorfor vi bruker informasjonskapsler.</a></p>
+          <button id="app-privacy-notification-close" class="close-button">
+            <span class="invisible">Lukk</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <!-- info notification (uncomment and use as needed) -->
+
+    <!--
+    <div class="app-info-notification app-notification">
+      <div class="app-global-wrapper">
+        <div class="notification-content">
+          <p>Dette er en viktig beskjed.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  -->
+
+  <!-- main app area -->
+
+  <main id="app-main">
+    <div class="app-global-wrapper">
+      <!-- app area -->
+    </div>
+  </main>
+
+  <!-- footer -->
+
+  <footer id="app-footer">
+    <div class="app-global-wrapper">
+
+      <!-- footer app name -->
+
+      <div id="footer-appname">
+        <span>Applikasjonsnavn</span>
+      </div>
+
+      <!-- footer content -->
+
+      <div id="app-footer-content">
+        <div>
+          <h2>Vilkår</h2>
+          <ul>
+            <li><a href="#">Personvern</a></li>
+            <li><a href="#">Tilgjengelighetserklæring</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Hjelp</h2>
+          <ul>
+            <li><a href="./readme.txt">Veiledning for applikasjonen</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <ul>
+            <li><a href="#">Kontaktinformasjon</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ansvarlig for denne tjenesten</h2>
+          <ul>
+            <li><a href="#">Nettredaktør</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+
+  <script src="./script/uio-app-header.js"></script>
+  <script src="./script/uio-app-privacy-notification.js"></script>
+</body>
+</html>

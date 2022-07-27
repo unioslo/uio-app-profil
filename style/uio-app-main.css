@@ -1,0 +1,44 @@
+/*******************************************************************************
+UiO App
+App-main styles
+********************************************************************************
+
+
+Global rules
+
+Font sizing
+- 1rem = 10px (so 2rem = 20px, 2.4rem = 24px etc.)
+- body = 1.8rem (18px)
+
+Resposive breakpoints
+- @media (min-width: 1101px).
+- @media (max-width: 1100px).
+- Add other breakpoints as needed.
+
+
+********************************************************************************
+app-main
+
+- Edit top/bottom spacing of app-main area.
+- Editing side-spacing (left/right padding/margin) is not recommended.
+*******************************************************************************/
+
+#app-main {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+
+/*******************************************************************************
+app-global-wrapper
+
+- This has global styles (see uio-app-global.css).
+- App can have max-width different from global if desired.
+- Editing side-spacing (left/right padding/margin) is not recommended.
+- Background image and height can be freely removed.
+*******************************************************************************/
+
+#app-main .app-global-wrapper {
+  background: url("../images/app.svg") no-repeat center;
+  min-height: 400px;
+}

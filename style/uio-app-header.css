@@ -1,0 +1,287 @@
+/*******************************************************************************
+UiO App
+Header styles
+*******************************************************************************/
+
+
+/*******************************************************************************
+header-uio-identity with logo
+*******************************************************************************/
+
+#header-uio-identity {
+  background: #000;
+  padding: 20px 0;
+}
+
+#header-uio-identity * {
+  color: #fff;
+}
+
+#header-uio-logo {
+  background: url("../images/uio-logo-name-no-neg.svg") no-repeat;
+  background-size: contain;
+  display: block;
+  height: 28px;
+  width: 200px;
+}
+
+/* english logo set from lang attribute */
+html[lang="en"] #header-uio-logo {
+  background-image: url("../images/uio-logo-name-en-neg.svg");
+}
+
+/*******************************************************************************
+app-header-core with app name and menus
+*******************************************************************************/
+
+#app-header-core {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #888;
+}
+
+#app-header-core .app-global-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-column-gap: 20px;
+}
+
+#header-appname {
+  line-height: 1.2;
+  margin: 10px 0;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* large screen */
+@media (min-width: 1101px) {
+  #app-header-core .app-global-wrapper {
+    align-items: center;
+    min-height: 90px;
+  }
+  #header-appname {
+    font-size: 3rem;
+  }
+}
+
+/* small screen */
+@media (max-width: 1100px) {
+  #app-header-core .app-global-wrapper {
+    overflow: hidden;
+  }
+  #header-appname {
+    font-size: 2.3rem;
+  }
+}
+
+/* app-header-core links and buttons */
+
+#app-header-core a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#app-header-core button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#app-header-core button[disabled] {
+  cursor: default;
+}
+
+#app-header-core button[disabled]:hover {
+  text-decoration: none;
+}
+
+/*******************************************************************************
+responsive-menu-button (for small screens)
+*******************************************************************************/
+
+#app-header-core #responsive-menu-button {
+  background: #fff url("../images/settings.svg") no-repeat center;
+  width: 40px;
+  height: 40px;
+  margin-top: 4px;
+  /* if rare case overlap */
+  position: relative;
+  z-index: 1;
+}
+
+/* large screen */
+@media (min-width: 1101px) {
+  #app-header-core #responsive-menu-button {
+    display: none;
+  }
+}
+
+/*******************************************************************************
+header-menu
+*******************************************************************************/
+
+#header-menu {
+  display: grid;
+  grid-gap: 25px;
+}
+
+/* large screen */
+@media (min-width: 1101px) {
+  #header-menu {
+    grid-auto-flow: column;
+  }
+}
+
+/* small screen */
+@media (max-width: 1100px) {
+  #header-menu {
+    grid-row-start: 1;
+    margin: 20px 0;
+  }
+  /* header-menu hidden unless expanded */
+  /* appname hidden when menu is expanded */
+  #app-header-core:not(.responsive-menu-expanded) #header-menu,
+  #app-header-core.responsive-menu-expanded #header-appname {
+    display: none;
+  }
+}
+
+/* header-menu containers */
+
+#header-menu .menu-container {
+  position: relative;
+}
+
+/*******************************************************************************
+header-menu buttons and links
+*******************************************************************************/
+
+#header-menu a,
+#header-menu button {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+}
+
+#header-menu a:hover,
+#header-menu button:hover {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  text-decoration-thickness: .05em;
+}
+
+#header-menu a::before,
+#header-menu button::before,
+#header-menu .expand-button::after {
+  content: "";
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px auto;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+#language-menu-button::before {
+  background-image: url("../images/globe.svg");
+}
+
+#user-menu-button::before {
+  background-image: url("../images/user.svg");
+}
+
+#header-menu .expand-button::after {
+  background-image: url("../images/chevron.svg");
+  transition: transform .3s;
+}
+
+#header-menu .expand-button[aria-expanded=true]::after {
+  transform: rotate(180deg);
+}
+
+/* small screen */
+@media (max-width: 1100px) {
+  #header-menu .expand-button {
+    font-weight: bold;
+  }
+  #header-menu .expand-button::after {
+    display: none;
+  }
+}
+
+/* limit expand-button text width */
+
+#header-menu .expand-button .button-text {
+  max-width: 20vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1100px) {
+  #header-menu .expand-button .button-text {
+    max-width: 80vw;
+  }
+}
+
+/*******************************************************************************
+collapsable-menu
+*******************************************************************************/
+
+#header-menu .collapsable-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* large screen */
+@media (min-width: 1101px) {
+  #header-menu .collapsable-menu {
+    position: absolute;
+    min-width: 100%;
+    border: 1px solid;
+    padding: 15px;
+    background: #fff;
+    z-index: 10;
+  }
+  #user-menu-content {
+    min-width: 160px;
+  }
+  #header-menu .collapsable-menu:not(.expanded) {
+    display: none;
+  }
+}
+
+/* small screen */
+@media (max-width: 1100px) {
+  #header-menu .collapsable-menu {
+    margin-left: 30px;
+  }
+}
+
+#header-menu .collapsable-menu a,
+#header-menu .collapsable-menu button {
+  padding: 5px 0;
+}
+
+/* menu item icons */
+
+#user-menu .log-out::before {
+  background-image: url("../images/log-out.svg");
+}
+
+/* language checkmark icon (dependent on html lang) */
+
+html[lang="nb"] #language-menu .nb::before {
+  background-image: url("../images/check.svg");
+}
+html[lang="en"] #language-menu .en::before {
+  background-image: url("../images/check.svg");
+}
