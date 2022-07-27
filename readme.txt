@@ -3,6 +3,7 @@ University of Oslo app profile
 ******************************
 
 
+
 Language – Setting and selecting
 -----------------------------------------------
 Set document language by editing the lang attribute on the HTML tag.
@@ -39,16 +40,19 @@ Files included
 **************
 
 
+
 uio-app-template.html
 -----------------------------------------------
 HTML framework.
 See comments in file.
 
 
+
 style/uio-app-global.css
 -----------------------------------------------
 CSS for the general framework.
 Contains global rules and some reusable classes.
+
 
 
 style/uio-app-header.css
@@ -62,10 +66,12 @@ style/uio-app-footer.css
 CSS for the bottom area.
 
 
+
 style/uio-app-main.css
 -----------------------------------------------
 CSS for the main app area.
 See comments on how to edit the size and spacing for your main app area etc.
+
 
 
 style/uio-app-notifications.css
@@ -76,6 +82,7 @@ privacy-notification = UiO's standard cookie warning.
 info-notification = can be used for anything app-related.
 
 
+
 script/uio-app-header.js
 -----------------------------------------------
 Controls language-menu and user-menu in header.
@@ -84,12 +91,14 @@ Controls responsive-menu-button on small screen.
 Detects screen width and applies necessary header logic.
 
 
+
 script/uio-app-privacy-notification.js
 -----------------------------------------------
 Handles privacy-notification.
 The notification is commented out in the HTML file. Uncomment and use as needed.
 The script will hide the notification if clicked away by user.
 Visibility is controlled by the [hidden] attribute in the HTML.
+
 
 
 images folder
