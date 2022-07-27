@@ -20,7 +20,19 @@ Notice how the "language-dependent" class is used.
 
 Selecting language in the header menu changes the lang attribute.
 
-...
+
+
+Global CSS rules
+-----------------------------------------------
+Font sizing
+- 1rem = 10px (so 2rem = 20px, 2.4rem = 24px etc.)
+- body = 1.8rem (18px)
+
+Responsive breakpoints
+- @media (min-width: 1101px)
+- @media (max-width: 1100px)
+
+
 
 **************
 Files included
@@ -42,6 +54,7 @@ Contains global rules and some reusable classes.
 style/uio-app-header.css
 -----------------------------------------------
 CSS for the top area.
+Styles for responsive menu behaviour.
 
 
 style/uio-app-footer.css
@@ -66,6 +79,9 @@ info-notification = can be used for anything app-related.
 script/uio-app-header.js
 -----------------------------------------------
 Controls language-menu and user-menu in header.
+Controls language menu selection and HTML lang attribute.
+Controls responsive-menu-button on small screen.
+Detects screen width and applies necessary header logic.
 
 
 script/uio-app-privacy-notification.js

@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const appHead = document.getElementById('app-header-core');
   const headMenu = document.getElementById('header-menu');
-  const responsiveMenuButton = document.getElementById('responsive-menu-button');
   const languageMenu = document.getElementById('language-menu');
   const languageMenuButton = document.getElementById('language-menu-button');
   const languageMenuContent = document.getElementById('language-menu-content');
   const userMenu = document.getElementById('user-menu');
   const userMenuButton = document.getElementById('user-menu-button');
   const userMenuContent = document.getElementById('user-menu-content');
+  const responsiveMenuButton = document.getElementById('responsive-menu-button');
 
 
 
@@ -58,10 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  // close language- and user-menu if clicking outside
+  // close language- and user-menu if clicking outside of them
 
   document.addEventListener('click', (event) => {
+
     // if element exists but does not contain click target..
+
     if (languageMenu && !languageMenu.contains(event.target)) {
       languageMenuButton.setAttribute('aria-expanded', 'false');
       languageMenuContent.classList.remove('expanded');
@@ -97,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  // responsiveMenuButton click handling
+  // responsive menu button click handling
 
   if (responsiveMenuButton) {
     responsiveMenuButton.addEventListener('click', function(event) {
@@ -115,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // responsive check for small screen on window resize
+  // based on presence of responsiveMenuButton (which is controlled by css breakpoint)
 
   window.addEventListener('resize', smallScreenHeaderLogic);
 

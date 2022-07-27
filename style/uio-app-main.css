@@ -4,18 +4,6 @@ App-main styles
 ********************************************************************************
 
 
-Global rules
-
-Font sizing
-- 1rem = 10px (so 2rem = 20px, 2.4rem = 24px etc.)
-- body = 1.8rem (18px)
-
-Resposive breakpoints
-- @media (min-width: 1101px).
-- @media (max-width: 1100px).
-- Add other breakpoints as needed.
-
-
 ********************************************************************************
 app-main
 
