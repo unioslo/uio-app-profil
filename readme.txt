@@ -33,6 +33,24 @@ Responsive breakpoints
 - @media (min-width: 1101px)
 - @media (max-width: 1100px)
 
+Outer width and side-spacing
+The "app-global-wrapper" class:
+- Controls global max-width and side-spacing.
+- It is used in all outer framework containers.
+- It can be edited for the app area only in the app-main css.
+
+
+
+Using and editing the files
+-----------------------------------------------
+In general what should be used and edited is:
+- The main app area in the HTML file
+- The app-main CSS file.
+When editing other areas and files, consider:
+- What is technologically necessary.
+- Commenting out and overriding rather than changing.
+- How potential future updates of the framework should be handled.
+
 
 
 **************
@@ -80,7 +98,7 @@ style/uio-app-notifications.css
 CSS for notification boxes.
 The notifications are commented out in the HTML file. Uncomment and use as needed.
 privacy-notification = UiO's standard cookie warning.
-info-notification = can be used for anything app-related.
+info-notification = for app-related notifications.
 
 
 

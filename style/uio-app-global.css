@@ -68,7 +68,9 @@ skip-link: Used to skip blocks of navigation. Only visible on keyboard focus.
 app-global-wrapper
 
 - Controls global side-spacing and width.
-- For full-width-app, comment out max-width.
+- Important: This is used in all outer containers of the framework.
+- Changing these styles, will also affect header and footer.
+- To edit the app area only, see app-main css.
 *******************************************************************************/
 
 .app-global-wrapper {

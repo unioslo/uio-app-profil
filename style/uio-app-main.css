@@ -7,8 +7,8 @@ App-main styles
 ********************************************************************************
 app-main
 
-- Edit top/bottom spacing of app-main area.
-- Editing side-spacing (left/right padding/margin) is not recommended.
+- Set top/bottom spacing of app-main area.
+- Setting side-spacing (left/right padding/margin) is not recommended.
 *******************************************************************************/
 
 #app-main {
@@ -20,10 +20,10 @@ app-main
 /*******************************************************************************
 app-global-wrapper
 
-- This has global styles (see uio-app-global.css).
+- This has global styles (see app-global css).
 - App can have max-width different from global if desired.
-- Editing side-spacing (left/right padding/margin) is not recommended.
-- Background image and height can be freely removed.
+- Changing side-spacing (left/right padding/margin) is not recommended.
+- Background image and height can be freely edited or removed.
 *******************************************************************************/
 
 #app-main .app-global-wrapper {
