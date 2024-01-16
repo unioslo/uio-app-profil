@@ -118,6 +118,9 @@ The notification is commented out in the HTML file. Uncomment and use as needed.
 The script will hide the notification if clicked away by user.
 Visibility is controlled by the [hidden] attribute in the HTML.
 
+script/uio-GA-consent.js
+-----------------------------------------------
+Handles Google Analytics consent.
 
 
 images folder
